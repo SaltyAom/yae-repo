@@ -1,0 +1,9 @@
+{
+	"devDependencies": {
+		"@types/node": "^17.0.43"
+	},
+	"dependencies": {
+		"argon2": "^0.28.5",
+		"fastify": "^4.0.2"
+	}
+}
