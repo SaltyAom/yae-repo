@@ -109,7 +109,7 @@ const auth: FastifyPluginCallback = (app, _, done) => {
         async ({ userId, cookies: { accessToken } }, res) => {
             if (!userId || !accessToken) return new Error('Already signed out')
 
-            const removed = await removeToken(userId, accessToken)
+            const removed = await removeToken(+userId, accessToken)
             res.unsignCookie('accessToken')
 
             if (!removed) return new Error('Already signed out')

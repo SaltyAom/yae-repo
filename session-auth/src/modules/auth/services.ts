@@ -1,6 +1,5 @@
-import { verifyToken } from '@services/session-auth'
 import prisma from '@services/prisma'
-import { hash, verifyHash } from 'hash/src/services/hash'
+import { hash, verifyHash } from '@services/hash'
 
 import type { ChangePasswordInput, SignUpInput } from './types'
 
