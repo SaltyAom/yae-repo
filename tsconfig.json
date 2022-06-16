@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "CommonJS",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "strict": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@services/hash": ["./hash/src/hash/index.ts"],
+            "@services/prisma": ["./prisma/src/services/prisma/index.ts"],
+            "@services/redis": ["./redis/src/services/redis/index.ts"],
+            "@services/schema": ["./schema/src/services/schema/index.ts"],
+            "@services/session-auth": ["./session-auth/src/services/session-auth"],
+            // "@services/": [".//src/hash/index.ts"],
+        },
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    }
+}

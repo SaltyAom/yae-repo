@@ -1,4 +1,7 @@
-auth
+auth-guard
 hash
+module
+prisma
 redis
-redis-auth
+schema
+session-auth

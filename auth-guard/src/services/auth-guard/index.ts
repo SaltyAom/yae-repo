@@ -1,5 +1,10 @@
 import type { onRequestHookHandler } from 'fastify'
 
+// Implement it yourself
+const verifyToken = (accessToken: string) => {
+    return { id: accessToken, exists: true }
+}
+
 export const mutateAuthHook: onRequestHookHandler = async (req, res) => {
     const {
         cookies: { accessToken }

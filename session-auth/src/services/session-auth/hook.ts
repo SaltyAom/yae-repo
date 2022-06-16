@@ -2,7 +2,7 @@ import type { onRequestHookHandler } from 'fastify'
 
 import { verifyToken } from './token'
 
-export const mutateAuthHook: onRequestHookHandler = async (req, res) => {
+export const mutateSessionHook: onRequestHookHandler = async (req, res) => {
     const {
         cookies: { accessToken }
     } = req
@@ -15,7 +15,7 @@ export const mutateAuthHook: onRequestHookHandler = async (req, res) => {
     req.userId = +id
 }
 
-export const authGuardHook: onRequestHookHandler = (req, res, done) => {
+export const sessionGuardHook: onRequestHookHandler = (req, res, done) => {
     if (!req.auth)
         return res.status(401).send({
             error: 'Unauthorized'

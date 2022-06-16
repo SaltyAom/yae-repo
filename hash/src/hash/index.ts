@@ -27,7 +27,7 @@ const rawHash = async (value: string, dynamicPepper = '') =>
 export const hash = async (value: string, dynamicPepper = '') =>
     await rawHash(value, dynamicPepper).then((v) => v.toString('base64'))
 
-export const verify = async (
+export const verifyHash = async (
     hashValue: string,
     value: string,
     pepper: string

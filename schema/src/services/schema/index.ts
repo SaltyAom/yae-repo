@@ -3,7 +3,7 @@ import type { onRequestHookHandler } from 'fastify'
 import validate from 'fluent-schema-validator'
 import type { ObjectSchema } from 'fluent-json-schema'
 
-export const validateSchema =
+const validateSchema =
     <T = ObjectSchema>(schema: ObjectSchema): onRequestHookHandler =>
     ({ body }, res, done) => {
         if (!validate(body as T, schema))
@@ -11,3 +11,5 @@ export const validateSchema =
 
         done()
     }
+
+export default validateSchema
