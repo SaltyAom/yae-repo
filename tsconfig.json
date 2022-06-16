@@ -7,7 +7,7 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
-            "@services/hash": ["./hash/src/hash/index.ts"],
+            "@services/hash": ["hash/src/services/hash/index.ts"],
             "@services/prisma": ["./prisma/src/services/prisma/index.ts"],
             "@services/redis": ["./redis/src/services/redis/index.ts"],
             "@services/schema": ["./schema/src/services/schema/index.ts"],
